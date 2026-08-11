@@ -1,0 +1,31 @@
+{
+  "name": "viral-playbook",
+  "version": "1.0.0",
+  "description": "The Viral Video Playbook documentation site and downloadable creator resources.",
+  "type": "module",
+  "scripts": {
+    "build:site": "node scripts/build.mjs",
+    "build:skill": "node scripts/build-skill.mjs",
+    "build:pdf": "node scripts/build-pdf.mjs",
+    "build": "npm run build:site && npm run build:skill && npm run build:pdf",
+    "setup:browser": "playwright install chromium",
+    "dev": "wrangler pages dev dist",
+    "deploy": "wrangler pages deploy dist --project-name viral-playbook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hackbyrd/viral-playbook.git"
+  },
+  "keywords": [],
+  "author": "Jonathan Chen",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Hackbyrd/viral-playbook/issues"
+  },
+  "homepage": "https://github.com/Hackbyrd/viral-playbook#readme",
+  "devDependencies": {
+    "marked": "^18.0.9",
+    "playwright": "^1.62.1",
+    "wrangler": "^4.121.0"
+  }
+}
